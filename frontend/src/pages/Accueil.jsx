@@ -131,7 +131,7 @@ const Accueil = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-anton text-4xl lg:text-6xl uppercase mb-8 leading-tight">
+            <h2 className="font-anton text-2xl lg:text-3xl uppercase mb-8 leading-tight">
               Confiez votre croissance <br /> à des experts digitaux
             </h2>
             <div className="w-24 h-2 bg-blue-600 rounded-full"></div>
