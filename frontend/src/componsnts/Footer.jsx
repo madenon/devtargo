@@ -6,61 +6,63 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-b from-[#020617] via-[#020617] to-[#0f172a] text-white/70 font-poppins overflow-hidden">
-
-    
+      
       <div className="max-w-7xl mx-auto px-6 pt-24 pb-12 relative z-10">
+        
+        {/* BANNIÈRE CTA DYNAMIQUE */}
         <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.8 }}
-  className="bg-white/[0.04] backdrop-blur-2xl p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-24 shadow-2xl"
->
-  <div className="max-w-xl text-center lg:text-left">
-    <h3 className="font-anton text-2xl md:text-4xl uppercase tracking-tighter mb-4 text-white leading-tight">
-      Prêt à faire passer <br />
-      <span className="text-cyan-400 italic">votre business au niveau supérieur ?</span>
-    </h3>
-    <p className="text-slate-400 text-base md:text-lg leading-relaxed">
-      Construisons ensemble une stratégie digitale performante et durable.
-    </p>
-  </div>
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-white/[0.04] backdrop-blur-2xl p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-24 shadow-2xl"
+        >
+          <div className="max-w-xl text-center lg:text-left">
+            {/* Correction du leading ici pour éviter l'écrasement des lettres */}
+            <h3 className="font-anton text-2xl md:text-2xl uppercase tracking-tighter mb-4 text-white leading-[1.2] md:leading-tight">
+              Prêt à faire passer <br />
+              <span className="text-cyan-400 italic">votre business au niveau supérieur ?</span>
+            </h3>
+            <p className="text-slate-400 text-base md:text-lg leading-relaxed">
+              Construisons ensemble une stratégie digitale performante et durable.
+            </p>
+          </div>
 
-  <motion.a
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    href="/contact"
-    className="w-full md:w-auto text-center px-8 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold uppercase rounded-2xl shadow-xl shadow-cyan-500/20 tracking-wider text-sm"
-  >
-    Démarrer mon projet →
-  </motion.a>
-</motion.div>
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="/contact"
+            className="w-full md:w-auto text-center px-8 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold uppercase rounded-2xl shadow-xl shadow-cyan-500/20 tracking-wider text-sm transition-all"
+          >
+            Démarrer mon projet →
+          </motion.a>
+        </motion.div>
 
-        {/* GRID */}
+        {/* GRID DE NAVIGATION */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 border-b border-white/5 pb-20 text-center sm:text-left">
 
-          {/* BRAND */}
+          {/* BRAND & LOGO */}
           <div className="space-y-6 flex flex-col items-center sm:items-start">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center font-anton text-2xl text-white shadow-lg">
-                Dev
+                DVT
               </div>
               <h2 className="text-3xl font-anton tracking-tighter uppercase text-white">
                 Targo<span className="text-cyan-400">.</span>
               </h2>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed italic opacity-80">
+            <p className="text-slate-400 text-sm leading-relaxed italic opacity-80 max-w-xs">
               Experts en création web & marketing digital. Nous propulsons les marques vers la performance.
             </p>
           </div>
 
-          {/* MENU */}
+          {/* MENU NAVIGATION */}
           <div>
             <h4 className="text-white font-anton mb-8 uppercase text-xs tracking-[0.3em] opacity-50">Navigation</h4>
             <ul className="space-y-4 text-slate-300 text-sm">
               {["Services", "Réalisations", "À propos", "Contact"].map((item) => (
                 <li key={item}>
-                  <a href="/" className="hover:text-cyan-400 transition-colors">
+                  <a href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-cyan-400 transition-colors">
                     {item}
                   </a>
                 </li>
@@ -68,20 +70,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* SOLUTIONS */}
+          {/* SOLUTIONS / EXPERTISE */}
           <div>
             <h4 className="text-white font-anton mb-8 uppercase text-xs tracking-[0.3em] opacity-50">Expertise</h4>
             <ul className="space-y-4 text-slate-300 text-sm">
               {["Création Web", "SEO", "Google Business", "Social Ads"].map((item) => (
                 <li key={item} className="flex justify-center sm:justify-start gap-3">
-                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2"></span>
+                  <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 shrink-0"></span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* SOCIAL */}
+          {/* SOCIAL & SUPPORT */}
           <div className="space-y-6">
             <h4 className="text-white font-anton mb-8 uppercase text-xs tracking-[0.3em] opacity-50">Social</h4>
             <div className="flex justify-center sm:justify-start gap-3">
@@ -89,7 +91,7 @@ const Footer = () => {
                 <a
                   key={social}
                   href="#"
-                  className="w-11 h-11 bg-white/[0.04] border border-white/10 rounded-xl flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 font-bold text-xs"
+                  className="w-11 h-11 bg-white/[0.04] border border-white/10 rounded-xl flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 hover:text-white transition-all duration-300 font-bold text-xs"
                 >
                   {social}
                 </a>
@@ -107,7 +109,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* COPYRIGHT */}
+        {/* COPYRIGHT & LEGAL */}
         <div className="py-10 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-500 font-bold tracking-[0.2em] uppercase gap-6 text-center opacity-70">
           <p>© {currentYear} DevTargo — Digital Growth Agency</p>
           <div className="flex gap-8">
@@ -117,7 +119,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Glow décoratif */}
+      {/* EFFET VISUEL (GLOW) */}
       <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none"></div>
     </footer>
   );
