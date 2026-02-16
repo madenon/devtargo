@@ -37,7 +37,7 @@ function App() {
           <Route path="/a-propos" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resource/blog" element={<Blog />} />
-          {/* ok ok */}
+         
           <Route path="/resource/etudes-de-cas" element={<EtudeDeCas />} />
           <Route path="/resource/e-books" element={<Ebooks />} />
         </Routes>

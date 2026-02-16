@@ -7,34 +7,34 @@ const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-b from-[#020617] via-[#020617] to-[#0f172a] text-white/70 font-poppins overflow-hidden">
 
-      {/* CTA */}
+    
       <div className="max-w-7xl mx-auto px-6 pt-24 pb-12 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="bg-white/[0.04] backdrop-blur-2xl p-10 md:p-16 rounded-[3rem] border border-white/10 flex flex-col lg:flex-row justify-between items-center gap-12 mb-24 shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)]"
-        >
-          <div className="max-w-xl text-center lg:text-left">
-            <h3 className="font-anton text-2xl md:text-3xl uppercase tracking-tighter mb-6 text-white leading-[0.5]">
-              Prêt à faire passer <br />
-              <span className="text-cyan-400 italic">votre business au niveau supérieur ?</span>
-            </h3>
-            <p className="text-slate-400 text-lg leading-relaxed">
-              Construisons ensemble une stratégie digitale performante et durable.
-            </p>
-          </div>
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="bg-white/[0.04] backdrop-blur-2xl p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 mb-24 shadow-2xl"
+>
+  <div className="max-w-xl text-center lg:text-left">
+    <h3 className="font-anton text-2xl md:text-4xl uppercase tracking-tighter mb-4 text-white leading-tight">
+      Prêt à faire passer <br />
+      <span className="text-cyan-400 italic">votre business au niveau supérieur ?</span>
+    </h3>
+    <p className="text-slate-400 text-base md:text-lg leading-relaxed">
+      Construisons ensemble une stratégie digitale performante et durable.
+    </p>
+  </div>
 
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href="/contact"
-            className="px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-blue-600 hover:to-cyan-500 text-white font-bold uppercase rounded-2xl transition-all shadow-xl shadow-cyan-500/20 tracking-wider"
-          >
-            Démarrer mon projet →
-          </motion.a>
-        </motion.div>
+  <motion.a
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    href="/contact"
+    className="w-full md:w-auto text-center px-8 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold uppercase rounded-2xl shadow-xl shadow-cyan-500/20 tracking-wider text-sm"
+  >
+    Démarrer mon projet →
+  </motion.a>
+</motion.div>
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14 border-b border-white/5 pb-20 text-center sm:text-left">
