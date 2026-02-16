@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="space-y-6 flex flex-col items-center sm:items-start">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center font-anton text-2xl text-white shadow-lg">
-                DVT
+                Dev
               </div>
               <h2 className="text-3xl font-anton tracking-tighter uppercase text-white">
                 Targo<span className="text-cyan-400">.</span>
